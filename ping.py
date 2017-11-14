@@ -1,6 +1,9 @@
 from mpi4py import MPI
 
 def ping():
+    """
+    Two processus exchange pings.
+    """
     rank = MPI.COMM_WORLD.Get_rank()
     if rank >= 2:
         return # Only taking the first two processus in account here.
